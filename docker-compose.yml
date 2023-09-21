@@ -8,3 +8,20 @@ services:
       dockerfile: Dockerfile
     ports:
       - 3000:3000
+
+  db:
+    image: mysql
+    container_name: db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: books
+      MYSQL_USER: nuxt3
+      MYSQL_PASSWORD: nuxt3
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    ports:
+      - 8080:8080
