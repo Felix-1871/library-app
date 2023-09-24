@@ -7,12 +7,20 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "start": "node .output/server/index.mjs",
+    "test": "jest"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/google-fonts": "^3.0.2",
+    "jest": "^29.7.0",
     "nuxt": "^3.7.3",
     "nuxt-icon": "^0.5.0"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "@supabase/supabase-js": "^2.36.0",
+    "dotenv": "^16.3.1"
   }
 }
